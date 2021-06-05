@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'quotes_to_scrape_API.pipelines.SQLlitePipeline': 300,
+   'quotes_to_scrape_API.pipelines.SQLlitePipeline': 300,  # Calls the class SQLlitePipeline from pipelines.py
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
