@@ -10,4 +10,9 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         resp = json.loads(response.body)
         quotes = resp.get('quotes')
-        print(quotes)
+        for quote in quotes:
+            yield {
+                'author': quote['author']['name'],
+                'tags': quote['tags'],
+                'quote': quote['text']
+            }
